@@ -1,0 +1,90 @@
+﻿@using Dto
+@model List<PhotoModel>
+     
+<div class="text-center p-4">
+    <h1> My Photos</h1>
+</div>
+
+
+    <div class="container">
+        <div class="row p-4 text-center">
+            @if(Model.Count>0){
+                @foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        <button onclick="GetPhoto(@item.Id)" class="btn" data-bs-toggle="modal" data-bs-target="#photomodel" >
+                            <img src="/img/@item.Path" width="100%" height="auto" />
+                        </button>
+                    </div>
+                }
+            }else{
+                <h1> You Dont Have Any Photos Yet :(</h1>
+
+            }
+           
+           @* <div class="col-3">
+                <img src="/img/2.png" width="100%" height="auto" />
+            </div>
+            <div class="col-3">
+                <img src="/img/3.png" width="100%" height="auto" />
+            </div>
+            <div class="col-3">
+                <img src="/img/4.png" width="100%" height="auto" />
+            </div>*@
+        </div>
+
+        <div class="row text-center p-4">
+            <h3><a href="/Home/AddPhoto/" style="text-decoration:none;">Add Photo</a></h3>
+        </div>
+
+
+    </div>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="photomodel" tabindex="-1" role="dialog" aria-labelledby="photomodel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">When I was in The Maldives</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row p-4 text-center">
+                    <p>Tags : #tag1,#tag2,#tag3,#tag4</p>
+                </div>
+                <div class="row">
+                    <img src="/img/1.png" width="100%" height="auto" />
+                </div>
+                <div class="row p-4 text-center">
+                    <button type="button" class="btn" onclick="delete(1)">Delete Photo</button>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                @*<button type="button" class="btn btn-primary">Save changes</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    function GetPhoto(Id)
+    {
+        $.ajax({
+            url:'/Home/GetPhoto',
+            data : {Id,Id},
+            success: function(data){
+                $('#photomodel').empty();
+                $('#photomodel').html(data);
+            }
+        })
+    }
+    
+
+            
+
+</script>
