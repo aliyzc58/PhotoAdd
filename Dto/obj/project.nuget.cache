@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "vvY56RD2hhj1P6rcvoCy4g/ZZIYaYX3X+AH5qpTp/TlmrFQzwfDvRMqAiMEa8IbdV8SEZTQqaQ6/hV1RQtYqKg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ademy\\Desktop\\case\\project_sosyopix\\Dto\\Dto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ademy\\.nuget\\packages\\microsoft.aspnetcore.http.features\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",
+    "C:\\Users\\ademy\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0-preview.4.21253.7\\microsoft.extensions.primitives.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "C:\\Users\\ademy\\.nuget\\packages\\system.io.pipelines\\6.0.0-preview.4.21253.7\\system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "C:\\Users\\ademy\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.4.21253.7\\system.runtime.compilerservices.unsafe.6.0.0-preview.4.21253.7.nupkg.sha512"
+  ],
+  "logs": []
+}
